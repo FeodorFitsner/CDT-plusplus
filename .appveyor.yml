@@ -29,7 +29,7 @@ install:
   - set PATH=C:\projects\dev\cmake\bin;%PATH%
   - cmake --version
   # Setup Clang-cl
-  - set PATH="C:\Program Files\LLVM\bin";%PATH%
+  - set PATH=C:\Program Files\LLVM\bin;%PATH%
   - clang-cl -v
   # Install Boost
   - nuget install boost
@@ -44,7 +44,8 @@ install:
   #- cd build
   #- dir
   #- cd ..
-  - set PATH="C:\projects\dev\boost.1.64.0.0\lib";%PATH%
+  - set PATH=C:\msys64\usr\bin;%PATH%
+  - set PATH=C:\projects\dev\boost.1.64.0.0\lib;%PATH%
   # Install CGAL
   - set CGAL_URL="https://github.com/CGAL/releases/archive/CGAL-4.9.1.zip"
   - appveyor DownloadFile %CGAL_URL% -FileName cgal.zip
